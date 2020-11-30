@@ -1,0 +1,15 @@
+{
+  "name": "rick-and-morty-tournament-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Gabriel Kaszewski",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.19"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
