@@ -24,32 +24,32 @@ cd rick-and-morty-tournament-api
 Run `npm install`
 Configure `environment.js`
 ```js
-const  config  =  {
-	dev:  {
-		database:  {
-		uri:  'yourmongodburi'
-		},
-		server:  {
-			host:  'localhost',
-			port:  5000
-		}
-	},
-	production:  {
-		database:  {
-			uri:  'yourmongodburi'
-		},
-		server:  {
-			host:  'localhost',
-			port:  5000
-		}
-	}
+const config = {
+    dev: {
+        database: {
+            uri: 'yourdburi'
+        },
+        server: {
+            host: 'localhost',
+            port: 5000
+        }
+    },
+    production: {
+        database: {
+            uri: 'yourdburi'
+        },
+        server: {
+            host: 'localhost',
+            port: 5000
+        }
+    }
 }
 
-module.exports  =  config;
+module.exports = config;
 ```
 Set `NODE_ENV` to `production` or `dev`.
 Run `npm start` and you are done!
-## Documenation
+## Documentation
 ### Routes
 `/characters`
 **GET** 200 - OK
