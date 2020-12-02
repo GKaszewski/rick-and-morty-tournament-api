@@ -9,12 +9,8 @@ routes.get('/characters', async (req, res) => {
         if (err) return res.sendStatus(400);
     }).sort({ eloRating: -1 }).exec((err, characters) => {
         if (err) return res.sendStatus(400);
-        let charactersMap = {};
-        characters.forEach(character => {
-            charactersMap[character._id] = character;
-        });
 
-        return res.send(charactersMap);
+        return res.send(characters);
     });
 });
 
