@@ -80,6 +80,7 @@ Calculates new elo rating for the pair of characters.
 |--|--|
 | _id |number|
 |  id|  number|
+|  name|  string|
 | status | string |
 |  species| string |
 |  gender| string |
