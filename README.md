@@ -59,7 +59,7 @@ Returns in ascending order of elo rating sorted list of characters.
 **GET** 200 - OK
 Fetches characters from [Rick and Morty API](https://rickandmortyapi.com/) converts it into **Character** model and saves it to the database.
 
-`/rating`
+`/rate`
 **POST** 200 - OK
 Request body
 ```json
