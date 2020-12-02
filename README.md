@@ -54,9 +54,11 @@ Run `npm start` and you are done!
 `/characters`
 **GET** 200 - OK
 Returns in ascending order of elo rating sorted list of characters.
+
 `/fetch-characters`
 **GET** 200 - OK
 Fetches characters from [Rick and Morty API](https://rickandmortyapi.com/) converts it into **Character** model and saves it to the database.
+
 `/rating`
 **POST** 200 - OK
 Request body
