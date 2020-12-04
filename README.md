@@ -1,3 +1,4 @@
+
 # Rick and Morty Tournamnet API
 An API for [Rick and Morty Tournamnet](https://github.com/GKaszewski/rick-and-morty-tournament).
 Using [Rick and Morty API](https://rickandmortyapi.com/)
@@ -24,40 +25,42 @@ cd rick-and-morty-tournament-api
 Run `npm install`
 Configure `environment.js`
 ```js
-const  config  =  {
-	dev:  {
-		database:  {
-		uri:  'yourmongodburi'
-		},
-		server:  {
-			host:  'localhost',
-			port:  5000
-		}
-	},
-	production:  {
-		database:  {
-			uri:  'yourmongodburi'
-		},
-		server:  {
-			host:  'localhost',
-			port:  5000
-		}
-	}
+const config = {
+    dev: {
+        database: {
+            uri: 'yourdburi'
+        },
+        server: {
+            host: 'localhost',
+            port: 5000
+        }
+    },
+    production: {
+        database: {
+            uri: 'yourdburi'
+        },
+        server: {
+            host: 'localhost',
+            port: 5000
+        }
+    }
 }
 
-module.exports  =  config;
+module.exports = config;
 ```
 Set `NODE_ENV` to `production` or `dev`.
 Run `npm start` and you are done!
-## Documenation
+## Documentation
 ### Routes
 `/characters`
 **GET** 200 - OK
 Returns in ascending order of elo rating sorted list of characters.
+
 `/fetch-characters`
 **GET** 200 - OK
 Fetches characters from [Rick and Morty API](https://rickandmortyapi.com/) converts it into **Character** model and saves it to the database.
-`/rating`
+
+`/rate`
 **POST** 200 - OK
 Request body
 ```json
@@ -78,6 +81,7 @@ Calculates new elo rating for the pair of characters.
 |--|--|
 | _id |number|
 |  id|  number|
+|  name|  string|
 | status | string |
 |  species| string |
 |  gender| string |
