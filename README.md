@@ -79,7 +79,7 @@ Calculates new elo rating for the pair of characters.
 #### Character
 | Field name |Type|
 |--|--|
-| _id |number|
+| _id |string|
 |  id|  number|
 |  name|  string|
 | status | string |
