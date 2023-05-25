@@ -37,7 +37,9 @@ routes.get('/fetch-characters', async (req, res) => {
         let characterModel = new Character(character);
         let alreadyExists = await Character.findOne({ id: characterModel.id });
         if (!alreadyExists) {
-            await characterModel.save((err, result) => { }).catch(err => error = true);
+            await characterModel.save((err, result) => {
+                if (err) error = true;
+            })
         }
     });
 
