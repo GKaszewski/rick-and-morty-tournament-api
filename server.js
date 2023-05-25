@@ -9,7 +9,10 @@ db.connectToDatabase(config);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({
+	origin: ['https://rickandmorty.gabrielkaszewski.dev',],
+	optionsSuccessStatus: 200,
+}));
 
 const characterRoutes = require('./routes/character.routes');
 
@@ -19,4 +22,4 @@ app.get("/", async (req, res) => {
     res.send("Welcome to Rick & Morty Tournament API!");
 });
 
-app.listen(config.server.port);
+app.listen(config.server.port, ()=>console.log("listening"));
